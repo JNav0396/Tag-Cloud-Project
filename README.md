@@ -1,4 +1,3 @@
-# Tag-Cloud-Project
 import java.net.URL;
 
 import java.net.URLConnection;
@@ -15,18 +14,21 @@ import java.net.MalformedURLException;
 
 public class Cloud {
 
-private String str;
-private ArrayList<String> stringstring;
-private ArrayList<Integer> numbers;
-private TreeMap<String, Integer> map;
+	private String str;
+	private ArrayList<String> stringstring;
+	private ArrayList<Integer> numbers;
+	private TreeMap<String, Integer> map;
 
-public Cloud() {
+	public Cloud() {
+
 	str = "";
 	stringstring = new ArrayList<String>();
 	numbers = new ArrayList<Integer>();
 	map = new TreeMap<String, Integer>();
-}
-public void populateLists(String strong) {
+	}
+	
+	public void populateLists(String strong) {
+	
 	// Brianna Bowers
 	str = strong;
 	ArrayList<String> strings;
@@ -37,6 +39,7 @@ public void populateLists(String strong) {
 	String[] d=str.split(" ");
 	boolean print = false;
 	String p="";
+	
 	for(int x=0;x<d.length;x++) {
 		if(d[x].matches("<p>.*")) {
 			print = true;
@@ -51,7 +54,9 @@ public void populateLists(String strong) {
 			print=false;
 		}
 	}
+	
 	String[] pp=p.split(" ");
+	
 	for(String ppp:pp) {
 		ppp = ppp.replaceAll("<.*>", "");
 		ppp = ppp.replaceAll(".*<.*", "");
@@ -61,7 +66,9 @@ public void populateLists(String strong) {
 			ints.add(1);
 		}
 	}
+	
 	String h1="";
+	
 	for(int x=0;x<d.length;x++) {
 		if(d[x].matches("<h1>.*")) {
 			print = true;
@@ -76,7 +83,9 @@ public void populateLists(String strong) {
 			print=false;
 		}
 	}
+	
 	String[] a=h1.split(" ");
+	
 	for(String ppp:a) {
 		ppp = ppp.replaceAll("<.*>", "");
 		ppp = ppp.replaceAll(".*<.*", "");
@@ -86,7 +95,9 @@ public void populateLists(String strong) {
 			ints.add(10);
 		}
 	}
+	
 	String h2="";
+	
 	for(int x=0;x<d.length;x++) {
 		if(d[x].matches("<h2>.*")) {
 			print = true;
@@ -101,7 +112,9 @@ public void populateLists(String strong) {
 			print=false;
 		}
 	}
+	
 	String[] b=h2.split(" ");
+	
 	for(String ppp:b) {
 		ppp = ppp.replaceAll("<.*>", "");
 		ppp = ppp.replaceAll(".*<.*", "");
@@ -111,7 +124,9 @@ public void populateLists(String strong) {
 			ints.add(8);
 		}
 	}
+	
 	String h3="";
+	
 	for(int x=0;x<d.length;x++) {
 		if(d[x].matches("<h3>.*")) {
 			print = true;
@@ -126,7 +141,9 @@ public void populateLists(String strong) {
 			print=false;
 		}
 	}
+	
 	String[] c=h3.split(" ");
+	
 	for(String ppp:c) {
 		ppp = ppp.replaceAll("<.*>", "");
 		ppp = ppp.replaceAll(".*<.*", "");
@@ -136,7 +153,9 @@ public void populateLists(String strong) {
 			ints.add(6);
 		}
 	}
+	
 	String h4="";
+	
 	for(int x=0;x<d.length;x++) {
 		if(d[x].matches("<h4>.*")) {
 			print = true;
@@ -151,7 +170,9 @@ public void populateLists(String strong) {
 			print=false;
 		}
 	}
+	
 	String[] e=h4.split(" ");
+	
 	for(String ppp:e) {
 		ppp = ppp.replaceAll("<.*>", "");
 		ppp = ppp.replaceAll(".*<.*", "");
@@ -161,7 +182,9 @@ public void populateLists(String strong) {
 			ints.add(4);
 		}
 	}
+	
 	String h5="";
+	
 	for(int x=0;x<d.length;x++) {
 		if(d[x].matches("<h5>.*")) {
 			print = true;
@@ -176,7 +199,9 @@ public void populateLists(String strong) {
 			print=false;
 		}
 	}
+	
 	String[] f=h5.split(" ");
+	
 	for(String ppp:f) {
 		ppp = ppp.replaceAll("<.*>", "");
 		ppp = ppp.replaceAll(".*<.*", "");
@@ -186,7 +211,9 @@ public void populateLists(String strong) {
 			ints.add(2);
 		}
 	}
+	
 	String h6="";
+	
 	for(int x=0;x<d.length;x++) {
 		if(d[x].matches("<h6>.*")) {
 			print = true;
@@ -201,7 +228,9 @@ public void populateLists(String strong) {
 			print=false;
 		}
 	}
+	
 	String[] g=h6.split(" ");
+	
 	for(String ppp:g) {
 		ppp = ppp.replaceAll("<.*>", "");
 		ppp = ppp.replaceAll(".*<.*", "");
@@ -211,7 +240,9 @@ public void populateLists(String strong) {
 			ints.add(1);
 		}
 	}
+	
 	String title="";
+	
 	for(int x=0;x<d.length;x++) {
 		if(d[x].matches("<title>.*")) {
 			print = true;
@@ -226,7 +257,9 @@ public void populateLists(String strong) {
 			print=false;
 		}
 	}
+	
 	String[] t=title.split(" ");
+	
 	for(String ppp:t) {
 		ppp = ppp.replaceAll("<.*>", "");
 		ppp = ppp.replaceAll(".*<.*", "");
@@ -236,7 +269,9 @@ public void populateLists(String strong) {
 			ints.add(10);
 		}
 	}
+	
 	String li="";
+	
 	for(int x=0;x<d.length;x++) {
 		if(d[x].matches("<li>.*")) {
 			print = true;
@@ -251,7 +286,9 @@ public void populateLists(String strong) {
 			print=false;
 		}
 	}
+	
 	String[] lli=li.split(" ");
+	
 	for(String ppp:lli) {
 		ppp = ppp.replaceAll("<.*>", "");
 		ppp = ppp.replaceAll(".*<.*", "");
@@ -268,18 +305,18 @@ public void populateLists(String strong) {
 		//This below prints the lists, you can delete this
 		System.out.println(strings.get(xx) + " " + ints.get(xx));
 	}
-}
+	}
 
-public void makeMap() {
+	public void makeMap() { // Joshua Navarro
 	for (int x = 0; x < stringstring.size(); x++) {
 		if (!map.containsKey(stringstring.get(x))) {
 			map.put(stringstring.get(x),0);
 		}
 		map.put(stringstring.get(x),map.get(stringstring.get(x)) + numbers.get(x));
 	}
-}
+	}
 
-public void paint() {
+	public void paint() {
 	
-}
+	}
 }
